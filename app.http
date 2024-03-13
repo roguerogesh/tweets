@@ -1,0 +1,64 @@
+
+GET http://localhost:3000/user/tweets/feed/?offset=0&limit=4&order=asc
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkYW1fcmljaGFyZCIsImlhdCI6MTcxMDA3MjAwOX0.W76t7_S5qtpe0dZV1-5oYRLgRZNw6EGr6PJlVktWx-8
+###
+
+POST http://localhost:3000/register/
+Content-Type: application/json
+
+{
+  "username": "adam_richard",
+  "password": "richard_567",
+  "name": "Adam Richard",
+  "gender": "male"
+}
+###
+
+
+POST http://localhost:3000/login/
+Content-Type: application/json
+
+{
+  "username":"adam_richard",
+  "password":"richard_567"
+}
+###
+
+
+
+GET http://localhost:3000/user/following/
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkYW1fcmljaGFyZCIsImlhdCI6MTcxMDE1NDU1MX0.GWvefY8eMZjsKktaKBCN79CH6wWPkSSwq5cSO1zOOBk
+###
+
+GET http://localhost:3000/user/followers/
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkYW1fcmljaGFyZCIsImlhdCI6MTcxMDE1NDgyNX0.g-6LQkAGgsRJxapW3H3ULl5GMWMAFx4rEJglsCiwyas
+###
+
+GET http://localhost:3000/tweets/1/
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkYW1fcmljaGFyZCIsImlhdCI6MTcxMDE1NDgyNX0.g-6LQkAGgsRJxapW3H3ULl5GMWMAFx4rEJglsCiwyas
+###
+
+GET http://localhost:3000/tweets/1/likes/
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkYW1fcmljaGFyZCIsImlhdCI6MTcxMDE2ODE2NX0.r09u1AQ39OxtImJyYhcl3LrfttVGVXH2Zckt0sj-F_M
+###
+
+GET http://localhost:3000/tweets/1/replies/
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkYW1fcmljaGFyZCIsImlhdCI6MTcxMDE2ODE2NX0.r09u1AQ39OxtImJyYhcl3LrfttVGVXH2Zckt0sj-F_M
+###
+
+GET http://localhost:3000/user/tweets/
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkYW1fcmljaGFyZCIsImlhdCI6MTcxMDE2ODE2NX0.r09u1AQ39OxtImJyYhcl3LrfttVGVXH2Zckt0sj-F_M
+###
+
+POST http://localhost:3000/user/tweets/
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkYW1fcmljaGFyZCIsImlhdCI6MTcxMDE2ODE2NX0.r09u1AQ39OxtImJyYhcl3LrfttVGVXH2Zckt0sj-F_M
+Content-Type: application/json
+
+{
+  "tweet": "The Mornings..."
+}
+
+###
+
+DELETE http://localhost:3000/tweets/1/
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkYW1fcmljaGFyZCIsImlhdCI6MTcxMDE2ODE2NX0.r09u1AQ39OxtImJyYhcl3LrfttVGVXH2Zckt0sj-F_M
